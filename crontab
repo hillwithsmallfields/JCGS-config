@@ -1,0 +1,7 @@
+ 0 21 * * * flite -t "It is now nine o'clock and time you got a life away from the computer"
+30 21 * * * flite -t "It is now half past nine"
+ 0 22 * * * flite -t "It is now ten o'clock and time you got ready for bed"
+15 22 * * * flite -t "It is now quarter past ten"
+30 22 * * * flite -t "It is now half past ten"
+45 22 * * * flite -t "It is now quarter to eleven"
+ 0 23 * * * flite -t "It is now eleven o'clock and well past time you went to bed"

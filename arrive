@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# to get the definition of CONFIG:
+. $HOME/.bash_profile
+
+cp $CONFIG/bash_profile $HOME/.bash_profile
+cp $CONFIG/emacs $HOME/.emacs
+cp $CONFIG/ratpoisonrc $HOME/.ratpoisonrc
+cp $CONFIG/signature $HOME/.signature
+cp $CONFIG/xinitrc $HOME/.xinitrc
+cp $CONFIG/crontab $HOME/.crontab
+cp $CONFIG/ $HOME/.
+cp $CONFIG/ $HOME/.
+cat > $HOME/tmp-sudoers <<SUDOEOF
+# /etc/sudoers
+#
+# See the man page for details on how to write a sudoers file.
+#
+
+Defaults	env_reset
+Defaults	timestamp_timeout=90
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# User privilege specification
+root	ALL=(ALL) ALL
+$USER ALL=(ALL) ALL
+SUDOEOF
+echo As root, do: cp $HOME/tmp-sudoers /etc/sudoers
+echo As root, do: cp $CONFIG/ratpoison.desktop /usr/share/xessions

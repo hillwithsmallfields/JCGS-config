@@ -1,0 +1,25 @@
+escape F1
+definekey root e select emacs
+definekey root KP_Left exchangeleft
+definekey root KP_Right exchangeright
+definekey root KP_Up exchangeup
+definekey root KP_Down exchangedown
+definekey top C-F1 focus
+definekey top M-F1 next
+# leave F2 for cycling windows within Emacs
+definekey top F3 focus
+definekey top F4 nextscreen
+addhook key banish
+set fgcolor green
+set bgcolor black
+# bind C-f exec firefox
+# definekey top KP_Insert select 0
+# exec /usr/bin/rpws init 6 -k # use with M-F1 etc
+
+# From http://michaeldehaan.net/2009/02/21/i-like-ratpoison/
+# To take a screenshot:
+definekey top Print exec urxvt -e scrot -cd 10
+
+banish
+exec xterm -fg green -e /bin/bash -l
+

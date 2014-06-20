@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE ogle_conf SYSTEM "/usr/share/ogle/ogle_conf.dtd">
+<!-- This is the configuration file for ogle. (man oglerc(5)) -->
+<ogle_conf>
+  <user_interface>
+    <bindings>
+	<b>	
+	  <action>UpperButton</action>
+	  <key>KP_Up</key>
+  	</b>
+	<b>	
+	  <action>LowerButton</action>
+	  <key>KP_Down</key>
+  	</b>
+	<b>	
+	  <action>RightButton</action>
+	  <key>KP_Right</key>
+  	</b>
+	<b>	
+	  <action>LeftButton</action>
+	  <key>KP_Left</key>
+  	</b>
+    </bindings>
+  </user_interface>
+</ogle_conf>

@@ -1,0 +1,60 @@
+#!/bin/bash
+echo "Builds started" > $HOME/build.log
+BUILD=$HOME/build
+EARLY=$BUILD/early
+NORMAL=$BUILD/normal
+LATE=$BUILD/late
+FINAL=$BUILD/final
+CPOPTS=-rup
+SOURCE=$HOME/library/source
+INTERPRETERS=$SOURCE/interpreters
+mkdir -p $BUILD $EARLY $NORMAL $LATE $FINAL
+cp $CPOPTS $HOME/open-projects/emacs $NORMAL
+# cp $CPOPTS $HOME/open-projects/libGE/trunk $EARLY/libGE
+cp $CPOPTS $INTERPRETERS/scheme/guile/guile-1.8.4 $EARLY
+# cp $CPOPTS $HOME/open-projects/mulvoc/mulvoc $NORMAL
+# for PROJECT in ulsiod libRTL ULGA
+# do
+#  cp $CPOPTS $HOME/open-projects/$PROJECT/trunk $NORMAL/$PROJECT
+# done
+# cp $CPOPTS $HOME/open-projects/GrEvo/trunk $FINAL/GrEvo
+# cp $CPOPTS $HOME/library/source/x/ratpoison/ratpoison-1.4.2 $NORMAL
+# sudo cp $CPOPTS $HOME/common/config/ratpoison.desktop /usr/share/xsessions
+# cp $CPOPTS $HOME/library/source/compilers/tcc-0.9.24 $NORMAL
+cp $CPOPTS $HOME/library/source/maths/gmp-4.2.4 $EARLY
+cp $CPOPTS $HOME/library/source/maths/libmatheval-1.1.7 $NORMAL
+for PROJECT in erlang/otp_src_R13B03 ghostscript/ghostscript-8.56 javascript lua/lua-5.1.2 octave/octave-3.0.1 prolog/swip/pl-5.8.2 python/Python-2.6.4 R/R-2.10.1 ruby/ruby-1.9.1-p376 slang/slang-2.2.2 smalltalk/syx-0.1.7 tcl/tcl8.4.15 tcl/tk8.4.15 logo/ucblogo-6.0
+do
+  cp $CPOPTS $INTERPRETERS/$PROJECT $NORMAL
+done
+cp $CPOPTS $HOME/open-projects/muesli $LATE/muesli
+echo Space taken before building
+du -hs $EARLY/* $NORMAL/* $LATE/* $BUILD
+for DIRGROUP in $EARLY $NORMAL $LATE # $FINAL
+do
+  echo
+  echo
+  echo Building $DIRGROUP packages
+  echo
+  echo
+  cd $DIRGROUP
+  for PACKAGE in *
+  do
+    echo
+    echo Building $PACKAGE
+    echo
+    cd $PACKAGE
+    ./configure
+    if make
+    then
+      echo "Made $PACKAGE" >> $HOME/build.log
+      sudo make install
+      make clean
+    else
+      echo "Failed to build $PACKAGE" >> $HOME/build.log
+    fi
+    cd ..
+  done
+done
+echo Space taken after building
+du -hs $EARLY/* $NORMAL/* $LATE/* $BUILD
