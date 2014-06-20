@@ -3,14 +3,16 @@
 # to get the definition of CONFIG:
 . $HOME/.bash_profile
 
-cp $CONFIG/bash_profile $HOME/.bash_profile
-cp $CONFIG/emacs $HOME/.emacs
-cp $CONFIG/ratpoisonrc $HOME/.ratpoisonrc
-cp $CONFIG/signature $HOME/.signature
-cp $CONFIG/xinitrc $HOME/.xinitrc
-cp $CONFIG/crontab $HOME/.crontab
-cp $CONFIG/ $HOME/.
-cp $CONFIG/ $HOME/.
+for FILE in bash_profile ratpoisonrc emacs crontab signature xinitrc
+do
+  TARGET=~/.$FILE
+  if [ -f $TARGET]
+  then
+    cp $TARGET ${TARGET}-old
+  fi
+  cp $CONFIG/$FILE $TARGET
+done
+
 cat > $HOME/tmp-sudoers <<SUDOEOF
 # /etc/sudoers
 #
@@ -30,5 +32,10 @@ Defaults	timestamp_timeout=90
 root	ALL=(ALL) ALL
 $USER ALL=(ALL) ALL
 SUDOEOF
+
 echo As root, do: cp $HOME/tmp-sudoers /etc/sudoers
-echo As root, do: cp $CONFIG/ratpoison.desktop /usr/share/xessions
+
+if [ ! -f /usr/share/xessions/ratpoison.desktop ]
+then
+  echo As root, do: cp $CONFIG/ratpoison.desktop /usr/share/xessions
+fi
