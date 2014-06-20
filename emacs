@@ -1,1 +1,1 @@
-(load-file "~/Dropbox/emacs/.emacs")
+(load-file "~/emacs/.emacs")
