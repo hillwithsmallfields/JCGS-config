@@ -23,7 +23,7 @@ export GATHERED=$HOME/library
 
 export PATH=$PATH:$DROPBOX/com:$HOME/bin
 
-export EMACS=$DROPBOX/emacs
+export EMACS=$HOME/emacs
 
 export WRITING=$DROPBOX/writing
 
