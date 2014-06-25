@@ -1,1 +1,1 @@
-(load-file "~/emacs/.emacs")
+(load-file "~/JCGS-emacs/.emacs")
