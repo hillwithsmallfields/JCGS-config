@@ -23,7 +23,7 @@ export GATHERED=$HOME/library
 
 export PATH=$PATH:$DROPBOX/com:$HOME/bin
 
-export EMACS=$HOME/emacs
+export EMACS=$HOME/JCGS-emacs
 
 export WRITING=$DROPBOX/writing
 
@@ -41,6 +41,13 @@ export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
 # xmodmap ~/.xmodmap
 
 export HANDLE=jcgs
+
+if [ -d /usr/local/go/bin ]
+then
+  PATH=$PATH:/usr/local/go/bin
+  export GOPATH=$GATHERED/go-code
+  export GOBIN=$HOME/bin
+fi
 
 # TODO: look at whether we have a network connection, before looking for a dropbox process
 ps -u $USER | grep -q dropbox
