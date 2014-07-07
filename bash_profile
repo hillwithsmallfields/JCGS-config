@@ -49,6 +49,11 @@ then
   export GOBIN=$HOME/bin
 fi
 
+if [ -f /arm/tools/setup/init/bash ]
+then
+  . /arm/tools/setup/init/bash
+fi
+
 # TODO: look at whether we have a network connection, before looking for a dropbox process
 ps -u $USER | grep -q dropbox
 DROPBOX_RUNNING=$?
