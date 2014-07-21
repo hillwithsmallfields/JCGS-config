@@ -42,16 +42,23 @@ export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
 
 export HANDLE=jcgs
 
-if [ -d /usr/local/go/bin ]
-then
-  PATH=$PATH:/usr/local/go/bin
-  export GOPATH=$GATHERED/go-code
-  export GOBIN=$HOME/bin
-fi
+# if [ -d /usr/local/go/bin ]
+# then
+#   PATH=$PATH:/usr/local/go/bin
+#   export GOPATH=$GATHERED/go-code
+#   export GOBIN=$HOME/bin
+# fi
 
 if [ -f /arm/tools/setup/init/bash ]
 then
   . /arm/tools/setup/init/bash
+fi
+
+if [ -d /arm/devsys-tools/abs ]
+then
+  PATH=$PATH:/arm/devsys-tools/abs
+  . /arm/tools/setup/init/bash
+  module load apache/subversion/1.7.3
 fi
 
 # TODO: look at whether we have a network connection, before looking for a dropbox process
