@@ -7,21 +7,28 @@ fi
 
 # User specific environment and startup programs
 
-export COMMON=$HOME/common
+if [ -d $HOME/common ]
+then
+  EHOME=$HOME
+else
+  EHOME=/work/$USER
+fi
 
-export DROPBOX=$HOME/Dropbox
+export COMMON=$EHOME/common
 
-export CONFIG=$HOME/JCGS-config
+export DROPBOX=$EHOME/Dropbox
+
+export CONFIG=$EHOME/JCGS-config
 
 export ORG=$DROPBOX/org
 
-export OPEN_PROJECTS=$HOME/open-projects
+export OPEN_PROJECTS=$EHOME/open-projects
 
 export VEHICLES=$DROPBOX/vehicles
 
-export GATHERED=$HOME/library
+export GATHERED=$EHOME/library
 
-export PATH=$PATH:$DROPBOX/com:$HOME/bin
+export PATH=$PATH:$DROPBOX/com:$EHOME/bin
 
 export EMACS=$HOME/JCGS-emacs
 
