@@ -42,7 +42,7 @@ export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
 
 export HANDLE=jcgs
 
-if echo $PATH | grep /usr/local/bin
+if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
   PATH=/usr/local/bin:$PATH
 fi
