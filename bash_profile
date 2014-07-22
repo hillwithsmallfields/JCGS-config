@@ -42,6 +42,11 @@ export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
 
 export HANDLE=jcgs
 
+if echo $PATH | grep /usr/local/bin
+then
+  PATH=/usr/local/bin:$PATH
+fi
+
 # if [ -d /usr/local/go/bin ]
 # then
 #   PATH=$PATH:/usr/local/go/bin
@@ -59,6 +64,8 @@ then
   PATH=$PATH:/arm/devsys-tools/abs
   . /arm/tools/setup/init/bash
   module load apache/subversion/1.7.3
+  alias gbuild='pb_var_exec -- go install -v arm.com/uniSched...'
+
 fi
 
 # TODO: look at whether we have a network connection, before looking for a dropbox process
