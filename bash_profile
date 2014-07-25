@@ -18,26 +18,24 @@ else
   EHOME=/work/$USER
 fi
 
+export EHOME
+
 # Various things my Emacs configuration, and my other scripts, want to
 # be able to find without hardcoding paths into them:
 
-export COMMON=$EHOME/common
-
-export DROPBOX=$EHOME/Dropbox
-
 export CONFIG=$EHOME/JCGS-config
+export SCRIPTS=$EHOME/JCGS-scripts
+export EMACS=$HOME/JCGS-emacs
 
-export ORG=$DROPBOX/org
-
+export COMMON=$EHOME/common
 export OPEN_PROJECTS=$EHOME/open-projects
-
-export VEHICLES=$DROPBOX/vehicles
-
 export GATHERED=$EHOME/library
 
-export PATH=$PATH:$DROPBOX/com:$EHOME/bin
+export DROPBOX=$EHOME/Dropbox
+export ORG=$DROPBOX/org
+export VEHICLES=$DROPBOX/vehicles
 
-export EMACS=$HOME/JCGS-emacs
+export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
 export WRITING=$DROPBOX/writing
 
