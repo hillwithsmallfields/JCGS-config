@@ -89,6 +89,11 @@ then
   PATH=$PATH:/home/android/android-sdk-linux/platform-tools
 fi
 
+if [ -f $EHOME/pebble/PebbleSDK-2.3/bin/pebble ]
+then
+  PATH=$PATH:$EHOME/pebble/PebbleSDK-2.3/bin
+fi
+
 # Dropbox: not available at work, so check first whether the dropbox
 # program is there.
 
