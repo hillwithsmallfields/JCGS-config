@@ -23,11 +23,10 @@ export EHOME
 # Various things my Emacs configuration, and my other scripts, want to
 # be able to find without hardcoding paths into them:
 
+export COMMON=$EHOME/common
 export CONFIG=$EHOME/JCGS-config
 export SCRIPTS=$EHOME/JCGS-scripts
-export EMACS=$HOME/JCGS-emacs
-
-export COMMON=$EHOME/common
+export EMACS=$EHOME/JCGS-emacs
 export OPEN_PROJECTS=$EHOME/open-projects
 export GATHERED=$EHOME/library
 
@@ -38,11 +37,12 @@ export VEHICLES=$DROPBOX/vehicles
 export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
 export WRITING=$DROPBOX/writing
-
 export LANGUAGES=$DROPBOX/languages
 
 # http_proxy=http://staff-proxy.ul.ie:8080/
 # export http_proxy
+
+export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
 export WWW_HOME=$COMMON/local-www/index.html
 
@@ -89,15 +89,24 @@ then
   PATH=$PATH:/home/android/android-sdk-linux/platform-tools
 fi
 
-if [ -f $EHOME/pebble/PebbleSDK-2.3/bin/pebble ]
+PEBBLE_SDK=$EHOME/pebble/PebbleSDK-2.4.1/bin
+if [ -f $PEBBLE_SDK/pebble ]
 then
-  PATH=$PATH:$EHOME/pebble/PebbleSDK-2.3/bin
+  PATH=$PATH:$PEBBLE_SDK
+fi
+
+# work-related scripts
+
+if [ -d /work/johstu01/work-scripts ]
+then
+  PATH=$PATH:/work/johstu01/work-scripts
 fi
 
 # Dropbox: not available at work, so check first whether the dropbox
 # program is there.
 
 # TODO: look at whether we have a network connection, before looking for a dropbox process
+
 DROPBOX_PROG=$HOME/.dropbox-dist/dropboxd
 if [ -f $DROPBOX_PROG ]
 then
