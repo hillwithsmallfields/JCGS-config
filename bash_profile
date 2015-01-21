@@ -59,12 +59,12 @@ then
   PATH=/usr/local/bin:$PATH
 fi
 
-# if [ -d /usr/local/go/bin ]
-# then
-#   PATH=$PATH:/usr/local/go/bin
+if [ -d /usr/local/go/bin ]
+then
+  PATH=$PATH:/usr/local/go/bin
 #   export GOPATH=$GATHERED/go-code
 #   export GOBIN=$HOME/bin
-# fi
+fi
 
 # Some work tools
 
