@@ -124,5 +124,5 @@ then
   then
     $DROPBOX_PROG &
   fi
-f
-i
+fi
+
