@@ -82,6 +82,13 @@ then
 
 fi
 
+# todo: make this pick up the latest version of scala, but still be syntactically correct if there are no versions
+if [ -d /usr/local/share/scala-2.11.6 ]
+then
+    PATH=$PATH:/usr/local/share/scala-2.11.6/bin
+    export SCALA_HOME=/usr/local/share/scala-2.11.6
+fi
+
 # android hacking (at home)
 
 if [ -d /home/android/android-sdk-linux/platform-tools ]
@@ -117,4 +124,5 @@ then
   then
     $DROPBOX_PROG &
   fi
-fi
+f
+i
