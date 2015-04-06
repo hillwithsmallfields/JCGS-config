@@ -48,7 +48,7 @@ export WWW_HOME=$COMMON/local-www/index.html
 
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
-export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
+# export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
 
 # xmodmap ~/.xmodmap
 
