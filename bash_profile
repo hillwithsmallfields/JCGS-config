@@ -102,6 +102,12 @@ then
   PATH=$PATH:$PEBBLE_SDK
 fi
 
+# joystick for emacs
+if [ -d $EHOME/joylisp ]
+then
+    PATH=$PATH:$EHOME/joylisp
+fi
+
 # work-related scripts
 
 if [ -d /work/johstu01/work-scripts ]
