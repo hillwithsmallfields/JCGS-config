@@ -132,3 +132,4 @@ then
   fi
 fi
 
+export EDITOR=emacsclient
