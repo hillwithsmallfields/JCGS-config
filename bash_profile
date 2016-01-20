@@ -9,14 +9,18 @@ fi
 
 # On my desktop machine at work, I avoid the NFS-mounted official home
 # directory for most things, and use a more capacious and faster local
-# partition; so I use $EHOME as "effective home":
+# partition; so I use $EHOME as "effective home".  Likewise, on my
+# Raspberry Pi home server, where the SD card isn't that large, I've
+# added a USB key, so we try that too.
 
-if [ -d $HOME/common ]
-then
-  EHOME=$HOME
-else
-  EHOME=/work/$USER
-fi
+for DIR in $HOME /work/$USER /mnt/usbmem
+do
+  if [ -d $DIR/common ]
+  then
+    EHOME=$DIR
+    break
+  fi
+done
 
 export EHOME
 
