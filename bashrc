@@ -52,6 +52,8 @@ export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
 export HANDLE=jcgs
 
+export SERVERUSER=`cat $HOME/.server-user`
+
 if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
   PATH=/usr/local/bin:$PATH
