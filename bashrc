@@ -53,7 +53,7 @@ export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 export HANDLE=jcgs
 
 export SERVERUSER=`cat $HOME/.server-user`
-export HOMESERVER=`cat $HMOE/.home-server`
+export HOMESERVER=`cat $HOME/.home-server`
 
 if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
