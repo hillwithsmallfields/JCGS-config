@@ -62,6 +62,11 @@ then
     export HOMESERVER=`cat $HOME/.home-server`
 fi
 
+if [ -f $HOME/.card-filename-format ]
+then
+    export CARDFILENAMEFORMAT=`cat $HOME/.card-filename-format`
+fi
+
 if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
   PATH=/usr/local/bin:$PATH
