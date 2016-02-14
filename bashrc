@@ -128,4 +128,11 @@ then
   PATH=$PATH:/work/johstu01/work-scripts
 fi
 
+# find openscad where I installed it from a tarball
+
+if -d /usr/local/openscad-2014.03/bin
+then
+    PATH=$PATH:/usr/local/openscad-2014.03/bin
+fi
+
 export EDITOR=emacsclient
