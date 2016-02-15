@@ -130,7 +130,7 @@ fi
 
 # find openscad where I installed it from a tarball
 
-if -d /usr/local/openscad-2014.03/bin
+if [ -d /usr/local/openscad-2014.03/bin ]
 then
     PATH=$PATH:/usr/local/openscad-2014.03/bin
 fi
