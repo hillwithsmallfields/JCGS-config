@@ -1,2 +1,2 @@
-xterm -fg green -bg black -ls &
+ssh-agent xterm -fg green -bg black -ls &
 ratpoison
