@@ -67,6 +67,11 @@ then
     export CARDFILENAMEFORMAT=`cat $HOME/.card-filename-format`
 fi
 
+if [ -f $HOME/.www-agenda-dir ]
+then
+    export WWW_AGENDA_DIR=`cat $HOME/.www-agenda-dir`
+fi
+
 if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
   PATH=/usr/local/bin:$PATH
