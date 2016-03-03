@@ -29,18 +29,18 @@ export OPEN_PROJECTS=$EHOME/open-projects
 export GATHERED=$EHOME/library
 
 export DROPBOX=$EHOME/Dropbox
-export ORG=$DROPBOX/org
-export VEHICLES=$DROPBOX/vehicles
+export ORG=$COMMON/org
+export VEHICLES=$COMMON/vehicles
 
 export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
-export WRITING=$DROPBOX/writing
-export LANGUAGES=$DROPBOX/languages
+export WRITING=$COMMON/writing
+export LANGUAGES=$COMMON/languages
 
 # http_proxy=http://staff-proxy.ul.ie:8080/
 # export http_proxy
 
-export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
+export PATH=$PATH:$COMMON/com:$EHOME/bin:$SCRIPTS
 
 export WWW_HOME=$COMMON/local-www/index.html
 
