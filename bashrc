@@ -31,6 +31,7 @@ export GATHERED=$EHOME/library
 export DROPBOX=$EHOME/Dropbox
 export ORG=$COMMON/org
 export VEHICLES=$COMMON/vehicles
+export MYSELFORG=$EHOME/myself/org
 
 export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
