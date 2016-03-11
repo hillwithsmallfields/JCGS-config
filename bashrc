@@ -25,6 +25,7 @@ export COMMON=$EHOME/common
 export CONFIG=$EHOME/JCGS-config
 export SCRIPTS=$EHOME/JCGS-scripts
 export EMACS=$EHOME/JCGS-emacs
+export ORGLISP=$EHOME/JCGS-org-mode
 export OPEN_PROJECTS=$EHOME/open-projects
 export GATHERED=$EHOME/library
 
