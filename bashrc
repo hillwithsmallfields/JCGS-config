@@ -115,9 +115,9 @@ fi
 
 # work-related scripts
 
-if [ -d /work/johstu01/work-scripts ]
+if [ -d /Work/johstu01/work-scripts ]
 then
-  PATH=$PATH:/work/johstu01/work-scripts
+  PATH=$PATH:/Work/johstu01/work-scripts
 fi
 
 # find openscad where I installed it from a tarball
