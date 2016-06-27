@@ -22,4 +22,3 @@
 # m h  dom mon dow   command
 7,37 * * * * /home/jcgs/bin/ddns-update
 0 2 * * * /mnt/usbmem/JCGS-scripts/server-daily
-0 3 * * * /mnt/usbmem/JCGS-scripts/pullrepos
