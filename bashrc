@@ -76,6 +76,11 @@ fi
 if [ -f /arm/tools/setup/init/bash ]
 then
   . /arm/tools/setup/init/bash
+  function fpgalocal
+  {
+    export FPGABIN=/home/johstu01/fpga-installed/fpga/bin
+    PATH=$FPGABIN:$PATH
+  }
 fi
 
 if [ -d /arm/devsys-tools/abs ]
@@ -114,7 +119,6 @@ then
 fi
 
 # work-related scripts
-
 
 if [ -d /nethome/johstu01/work-scripts ]
 then
