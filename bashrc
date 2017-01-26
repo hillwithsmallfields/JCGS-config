@@ -86,6 +86,7 @@ then
   # module load core gnu/gnuplot/4.4.2
   module load util arm/datasync/2.0
   module load swdev smartbear/codecollab/8.4.8403
+  module load gnu/gdb/7.7
   STDCPPNAME=`g++ --print-file libstdc++.so`
   STDCPPNAME32=`g++ -m32 --print-file libstdc++.so`
   LD_LIBRARY_PATH=`dirname $STDCPPNAME`:`dirname $STDCPPNAME32`:$LD_LIBRARY_PATH
@@ -95,10 +96,8 @@ fi
 if [ -d /arm/devsys-tools/abs ]
 then
   PATH=$PATH:/arm/devsys-tools/abs
-  . /arm/tools/setup/init/bash
   module load apache/subversion/1.7.3
   alias gbuild='pb_var_exec -- go install -v arm.com/uniSched...'
-
 fi
 
 # todo: make this pick up the latest version of scala, but still be syntactically correct if there are no versions
