@@ -76,11 +76,20 @@ fi
 if [ -f /arm/tools/setup/init/bash ]
 then
   . /arm/tools/setup/init/bash
-  function fpgalocal
-  {
-    export FPGABIN=/home/johstu01/fpga-installed/fpga/bin
-    PATH=$FPGABIN:$PATH
-  }
+  module load arm/cluster
+  module load swdev gnu/gcc/4.9.1_lto
+  module load gnu/gdb/7.7
+  module load core apache/subversion/1.6.13
+  module load swdev scons/scons/2.0.1
+  module load swdev gnu/cmake/3.4.3
+  module load util graphviz/graphviz/2.26.3
+  # module load core gnu/gnuplot/4.4.2
+  module load util arm/datasync/2.0
+  module load swdev smartbear/codecollab/8.4.8403
+  STDCPPNAME=`g++ --print-file libstdc++.so`
+  STDCPPNAME32=`g++ -m32 --print-file libstdc++.so`
+  LD_LIBRARY_PATH=`dirname $STDCPPNAME`:`dirname $STDCPPNAME32`:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH
 fi
 
 if [ -d /arm/devsys-tools/abs ]
@@ -138,3 +147,6 @@ then
 fi
 
 export EDITOR=emacsclient
+alias du='du -hs'
+alias df='df -h'
+umask 0007
