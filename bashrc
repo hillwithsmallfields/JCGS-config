@@ -1,11 +1,10 @@
-
 # User specific environment and startup programs
 
-# On my desktop machine at work, I avoid the NFS-mounted official home
-# directory for most things, and use a more capacious and faster local
-# partition; so I use $EHOME as "effective home".  Likewise, on my
-# Raspberry Pi home server, where the SD card isn't that large, I've
-# added a USB key, so we try that too.
+# On my desktop machine at somwhere I once worked, I avoided the
+# NFS-mounted official home directory for most things, and used a more
+# capacious and faster local partition; so I use $EHOME as "effective
+# home".  Likewise, on my Raspberry Pi home server, where the SD card
+# isn't that large, I've added a USB key, so we try that too.
 
 for DIR in $HOME /work/$USER /mnt/usbmem
 do
@@ -39,9 +38,6 @@ export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 export WRITING=$COMMON/writing
 export LANGUAGES=$COMMON/languages
 
-# http_proxy=http://staff-proxy.ul.ie:8080/
-# export http_proxy
-
 export PATH=$PATH:$COMMON/com:$EHOME/bin:$SCRIPTS
 
 export WWW_HOME=$COMMON/local-www/index.html
@@ -73,39 +69,7 @@ fi
 
 # Some work tools
 
-if [ -f /arm/tools/setup/init/bash ]
-then
-  . /arm/tools/setup/init/bash
-  module load arm/cluster
-  module load swdev gnu/gcc/4.9.1_lto
-  module load gnu/gdb/7.7
-  module load core apache/subversion/1.6.13
-  module load swdev scons/scons/2.0.1
-  module load swdev gnu/cmake/3.4.3
-  module load util graphviz/graphviz/2.26.3
-  # module load core gnu/gnuplot/4.4.2
-  module load util arm/datasync/2.0
-  module load swdev smartbear/codecollab/8.4.8403
-  module load gnu/gdb/7.7
-  STDCPPNAME=`g++ --print-file libstdc++.so`
-  STDCPPNAME32=`g++ -m32 --print-file libstdc++.so`
-  LD_LIBRARY_PATH=`dirname $STDCPPNAME`:`dirname $STDCPPNAME32`:$LD_LIBRARY_PATH
-  export LD_LIBRARY_PATH
-fi
-
-if [ -d /arm/devsys-tools/abs ]
-then
-  PATH=$PATH:/arm/devsys-tools/abs
-  module load apache/subversion/1.7.3
-  alias gbuild='pb_var_exec -- go install -v arm.com/uniSched...'
-fi
-
-# todo: make this pick up the latest version of scala, but still be syntactically correct if there are no versions
-if [ -d /usr/local/share/scala-2.11.6 ]
-then
-    PATH=$PATH:/usr/local/share/scala-2.11.6/bin
-    export SCALA_HOME=/usr/local/share/scala-2.11.6
-fi
+# None at the moment
 
 # android hacking (at home)
 
