@@ -109,6 +109,13 @@ then
     PATH=$PATH:/usr/local/openscad-2014.03/bin
 fi
 
+# add anaconda if available
+
+if [ -d /usr/local/bin/anaconda/bin ]
+then
+    PATH=$PATH:/usr/local/bin/anaconda/bin
+fi
+
 export EDITOR=emacsclient
 alias du='du -hs'
 alias df='df -h'
