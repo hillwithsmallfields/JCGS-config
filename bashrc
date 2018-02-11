@@ -92,9 +92,9 @@ fi
 
 # work-related scripts
 
-if [ -d /nethome/johstu01/work-scripts ]
+if [ -d $EHOME/work-scripts ]
 then
-  PATH=$PATH:/nethome/johstu01/work-scripts
+  PATH=$PATH:$EHOME/work-scripts
   else
   if [ -d $HOME/work-scripts ]
   then
