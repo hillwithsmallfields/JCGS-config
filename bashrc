@@ -50,6 +50,11 @@ export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
 export HANDLE=jcgs
 
+if [ -f $HOME/.env ]
+then
+    . $HOME/.env
+fi
+
 if [ -f $HOME/.local_bashrc ]
 then
     . $HOME/.local_bashrc
