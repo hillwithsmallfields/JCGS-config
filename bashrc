@@ -26,6 +26,7 @@ export SCRIPTS=$EHOME/JCGS-scripts
 export EMACS=$EHOME/JCGS-emacs
 export ORGLISP=$EHOME/JCGS-org-mode/lisp
 export OPEN_PROJECTS=$EHOME/open-projects
+export GOPATH=$OPEN_PROJECTS
 export GATHERED=$EHOME/library
 
 export DROPBOX=$EHOME/Dropbox
@@ -64,17 +65,6 @@ if echo $PATH | grep -v /usr/local/bin > /dev/null
 then
   PATH=/usr/local/bin:$PATH
 fi
-
-if [ -d /usr/local/go/bin ]
-then
-  PATH=$PATH:/usr/local/go/bin
-#   export GOPATH=$GATHERED/go-code
-#   export GOBIN=$HOME/bin
-fi
-
-# Some work tools
-
-# None at the moment
 
 # android hacking (at home)
 
