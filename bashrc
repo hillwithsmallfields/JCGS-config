@@ -114,4 +114,4 @@ fi
 export EDITOR=emacsclient
 alias du='du -hs'
 alias df='df -h'
-umask 0007
+umask 0002
