@@ -1,4 +1,4 @@
 (load-file
-	(if (getenv "EHOME")
-		(substitute-in-file-name "$EHOME/JCGS-emacs/.emacs")
-	 "~/JCGS-emacs/.emacs"))
+	(if (getenv "MY_ELISP")
+		(substitute-in-file-name "$MY_ELISP/.emacs")
+	 "~/github/hillwithsmallfields/JCGS-emacs/.emacs"))

@@ -6,6 +6,8 @@
 # home".  Likewise, on my Raspberry Pi home server, where the SD card
 # isn't that large, I've added a USB key, so we try that too.
 
+# "common" is the directory that I keep synced between machines.
+
 for DIR in $HOME /work/$USER /mnt/usbmem
 do
   if [ -d $DIR/common ]
@@ -15,17 +17,23 @@ do
   fi
 done
 
+if [ -z "$EHOME" ]
+then
+    EHOME=$HOME
+fi
+
 export EHOME
 
 # Various things my Emacs configuration, and my other scripts, want to
 # be able to find without hardcoding paths into them:
 
 export COMMON=$EHOME/common
-export CONFIG=$EHOME/JCGS-config
-export SCRIPTS=$EHOME/JCGS-scripts
-export EMACS=$EHOME/JCGS-emacs
-export ORGLISP=$EHOME/JCGS-org-mode/lisp
 export OPEN_PROJECTS=$EHOME/open-projects
+export MY_PROJECTS=$OPEN_PROJECTS/github.com/hillwithsmallfields
+export CONFIG=$MY_PROJECTS/JCGS-config
+export SCRIPTS=$MY_PROJECTS/JCGS-scripts
+export MY_ELISP=$MY_PROJECTS/JCGS-emacs
+export ORGLISP=$MY_PROJECTS/JCGS-org-mode/lisp
 export GOPATH=$OPEN_PROJECTS
 export GATHERED=$EHOME/library
 
