@@ -119,6 +119,13 @@ then
     PATH=$PATH:/usr/local/bin/anaconda/bin
 fi
 
+# add arduino if available
+
+if [ -d /usr/local/arduino-1.8.10 ]
+then
+    PATH=$PATH:/usr/local/arduino-1.8.10
+fi
+
 export EDITOR=emacsclient
 alias du='du -hs'
 alias df='df -h'
