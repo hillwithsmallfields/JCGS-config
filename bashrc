@@ -64,6 +64,11 @@ then
     . $HOME/.env
 fi
 
+if [ -f $HOME/work-scripts/work-env ]
+then
+    . $HOME/work-scripts/work-env
+fi
+
 if [ -f $HOME/.local_bashrc ]
 then
     . $HOME/.local_bashrc
