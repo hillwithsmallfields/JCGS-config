@@ -64,6 +64,18 @@ then
     . $HOME/.env
 fi
 
+# work-related scripts
+
+if [ -d $EHOME/work-scripts ]
+then
+  PATH=$PATH:$EHOME/work-scripts
+  else
+  if [ -d $HOME/work-scripts ]
+  then
+    PATH=$PATH:$HOME/work-scripts
+  fi
+fi
+
 if [ -f $HOME/work-scripts/work-env ]
 then
     . $HOME/work-scripts/work-env
@@ -96,18 +108,6 @@ fi
 if [ -d $EHOME/joylisp ]
 then
     PATH=$PATH:$EHOME/joylisp
-fi
-
-# work-related scripts
-
-if [ -d $EHOME/work-scripts ]
-then
-  PATH=$PATH:$EHOME/work-scripts
-  else
-  if [ -d $HOME/work-scripts ]
-  then
-    PATH=$PATH:$HOME/work-scripts
-  fi
 fi
 
 # find openscad where I installed it from a tarball
