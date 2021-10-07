@@ -1,0 +1,17 @@
+{"apt_packages": ["emacs",
+                  "ratpoison",
+                  "syncthing"],
+ "pip_packages": ["measurement"
+                  "ordered_set",
+                  "oura",
+                  "overpass2",
+                  "pycrypto",
+                  "python-decouple",
+                  "pyyaml",
+                  "sexpdata"],
+ "dot_files": [
+     "bashrc",
+     "bash_profile",
+     "emacs",
+     "signature",
+     "xinitrc"]}
