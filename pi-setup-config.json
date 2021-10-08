@@ -1,7 +1,7 @@
-{"apt_packages": ["emacs",
+{"apt-packages": ["emacs",
                   "ratpoison",
                   "syncthing"],
- "pip_packages": ["measurement",
+ "pip-packages": ["measurement",
                   "ordered_set",
                   "oura",
                   "overpass2",
@@ -10,9 +10,18 @@
                   "python-decouple",
                   "pyyaml",
                   "sexpdata"],
- "dot_files": [
+ "dot-files": [
      "bashrc",
      "bash_profile",
      "emacs",
      "signature",
-     "xinitrc"]}
+     "xinitrc"],
+ 'mountpoint': "/mnt/hdd0",
+ 'projects-directory': "open-projects/github.com/hillwithsmallfields",
+ 'config-project': "JCGS-config",
+ 'github-list': "https://api.github.com/users/hillwithsmallfields/repos",
+ 'ext-drive': "/dev/sda1",
+ 'mountpoint': "/mnt/hdd0",
+ 'user': "jcgs",
+ 'name': "John Sturdy"
+}
