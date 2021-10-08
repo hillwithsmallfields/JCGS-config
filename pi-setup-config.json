@@ -6,6 +6,7 @@
                   "oura",
                   "overpass2",
                   "pycrypto",
+                  "pyowm",
                   "python-decouple",
                   "pyyaml",
                   "sexpdata"],
