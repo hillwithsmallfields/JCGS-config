@@ -11,7 +11,7 @@
                   "pyyaml",
                   "sexpdata"],
  "git-repos": [
-     "https://github.com/coddingtonbear/python-myfitnesspal.git"]
+     "https://github.com/coddingtonbear/python-myfitnesspal.git"],
  "dot-files": [
      "bashrc",
      "bash_profile",
