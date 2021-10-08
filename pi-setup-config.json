@@ -16,12 +16,12 @@
      "emacs",
      "signature",
      "xinitrc"],
- 'mountpoint': "/mnt/hdd0",
- 'projects-directory': "open-projects/github.com/hillwithsmallfields",
- 'config-project': "JCGS-config",
- 'github-list': "https://api.github.com/users/hillwithsmallfields/repos",
- 'ext-drive': "/dev/sda1",
- 'mountpoint': "/mnt/hdd0",
- 'user': "jcgs",
- 'name': "John Sturdy"
+ "mountpoint": "/mnt/hdd0",
+ "projects-directory": "open-projects/github.com/hillwithsmallfields",
+ "config-project": "JCGS-config",
+ "github-list": "https://api.github.com/users/hillwithsmallfields/repos",
+ "ext-drive": "/dev/sda1",
+ "mountpoint": "/mnt/hdd0",
+ "user": "jcgs",
+ "name": "John Sturdy"
 }
