@@ -10,20 +10,24 @@
                   "python-decouple",
                   "pyyaml",
                   "sexpdata"],
- "git-repos": [
-     "https://github.com/coddingtonbear/python-myfitnesspal.git"],
  "dot-files": [
      "bashrc",
      "bash_profile",
      "emacs",
      "signature",
      "xinitrc"],
+
  "ext-drive": "/dev/sda1",
  "mount-point": "/mnt/hdd0",
- "repos-directory": "open-projects",
+
+ "user": "jcgs",
+ "name": "John Sturdy"
+
  "projects-directory": "open-projects/github.com/hillwithsmallfields",
  "config-project": "JCGS-config",
  "github-list": "https://api.github.com/users/hillwithsmallfields/repos",
- "user": "jcgs",
- "name": "John Sturdy"
+
+ "repos-directory": "$HOME/open-projects",
+ "git-repos": [
+     "https://github.com/coddingtonbear/python-myfitnesspal.git"],
 }
