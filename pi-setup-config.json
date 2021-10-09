@@ -21,7 +21,7 @@
  "mount-point": "/mnt/hdd0",
 
  "user": "jcgs",
- "name": "John Sturdy"
+ "name": "John Sturdy",
 
  "projects-directory": "open-projects/github.com/hillwithsmallfields",
  "config-project": "JCGS-config",
@@ -29,5 +29,5 @@
 
  "repos-directory": "$HOME/open-projects",
  "git-repos": [
-     "https://github.com/coddingtonbear/python-myfitnesspal.git"],
+     "https://github.com/coddingtonbear/python-myfitnesspal.git"]
 }
