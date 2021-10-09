@@ -27,7 +27,7 @@
  "config-project": "JCGS-config",
  "github-list": "https://api.github.com/users/hillwithsmallfields/repos",
 
- "repos-directory": "$HOME/open-projects",
+ "repos-directory": "open-projects",
  "git-repos": [
      "https://github.com/coddingtonbear/python-myfitnesspal.git"]
 }
