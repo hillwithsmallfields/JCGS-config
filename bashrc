@@ -4,13 +4,11 @@
 # NFS-mounted official home directory for most things, and used a more
 # capacious and faster local partition; so I use $EHOME as "effective
 # home".  Likewise, on my Raspberry Pi home server, where the SD card
-# isn't that large, I've added a USB key, so we try that too.
+# isn't that large, I've added an external HDD, so we try that too.
 
-# "common" is the directory that I keep synced between machines.
-
-for DIR in $HOME /work/$USER /mnt/usbmem
+for DIR in $HOME /work/$USER /mnt/usbmem /mnt/hdd0
 do
-  if [ -d $DIR/common ]
+  if [ -d $DIR/Sync ]
   then
     EHOME=$DIR
     break
@@ -27,7 +25,7 @@ export EHOME
 # Various things my Emacs configuration, and my other scripts, want to
 # be able to find without hardcoding paths into them:
 
-export COMMON=$EHOME/common
+export SYNCED=$EHOME/Sync
 export OPEN_PROJECTS=$EHOME/open-projects
 export MY_PROJECTS=$OPEN_PROJECTS/github.com/hillwithsmallfields
 export CONFIG=$MY_PROJECTS/JCGS-config
@@ -38,18 +36,18 @@ export GOPATH=$OPEN_PROJECTS
 export GATHERED=$EHOME/library
 
 export DROPBOX=$EHOME/Dropbox
-export ORG=$COMMON/org
-export VEHICLES=$COMMON/vehicles
+export ORG=$SYNC/org
+export VEHICLES=$SYNC/vehicles
 export MYSELFORG=$EHOME/myself/org
 
 export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
 
-export WRITING=$COMMON/writing
-export LANGUAGES=$COMMON/languages
+export WRITING=$SYNC/writing
+export LANGUAGES=$SYNC/languages
 
-export PATH=$PATH:$COMMON/com:$EHOME/bin:$SCRIPTS
+export PATH=$PATH:$SYNC/com:$EHOME/bin:$SCRIPTS
 
-export WWW_HOME=$COMMON/local-www/index.html
+export WWW_HOME=$SYNC/local-www/index.html
 
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
