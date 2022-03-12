@@ -36,18 +36,18 @@ export GOPATH=$OPEN_PROJECTS
 export GATHERED=$EHOME/library
 
 export DROPBOX=$EHOME/Dropbox
-export ORG=$SYNC/org
-export VEHICLES=$SYNC/vehicles
+export ORG=$SYNCED/org
+export VEHICLES=$SYNCED/vehicles
 export MYSELFORG=$EHOME/myself/org
 
-export PATH=$PATH:$DROPBOX/com:$EHOME/bin:$SCRIPTS
+export PATH=$PATH:$EHOME/commands:$SCRIPTS
 
-export WRITING=$SYNC/writing
-export LANGUAGES=$SYNC/languages
+export WRITING=$SYNCED/writing
+export LANGUAGES=$SYNCED/languages
 
-export PATH=$PATH:$SYNC/com:$EHOME/bin:$SCRIPTS
+export PATH=$PATH:$SYNCED/com:$EHOME/bin:$SCRIPTS
 
-export WWW_HOME=$SYNC/local-www/index.html
+export WWW_HOME=$SYNCED/local-www/index.html
 
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
