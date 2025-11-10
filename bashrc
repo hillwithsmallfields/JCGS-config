@@ -34,8 +34,8 @@ export MY_ELISP=$MY_PROJECTS/JCGS-emacs
 export ORGLISP=$MY_PROJECTS/JCGS-org-mode/lisp
 export GOPATH=$OPEN_PROJECTS
 export GATHERED=$EHOME/library
+export BIBLE=$GATHERED/bible
 
-export DROPBOX=$EHOME/Dropbox
 export ORG=$SYNCED/org
 export VEHICLES=$SYNCED/vehicles
 export MYSELFORG=$EHOME/myself/org
