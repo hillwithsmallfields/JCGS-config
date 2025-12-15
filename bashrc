@@ -57,10 +57,13 @@ export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
 export HANDLE=jcgs
 
-if [ -f $HOME/.env ]
-then
-    . $HOME/.env
-fi
+for EXTRA_ENV in $HOME/.env $HOME/.local_bashrc $HOME/work-scripts/work-env $SYNCED/.env
+do
+    if [ -f $EXTRA_ENV ]
+    then
+        . $EXTRA_ENV
+    fi
+done
 
 # work-related scripts
 
@@ -72,16 +75,6 @@ then
   then
     PATH=$PATH:$HOME/work-scripts
   fi
-fi
-
-if [ -f $HOME/work-scripts/work-env ]
-then
-    . $HOME/work-scripts/work-env
-fi
-
-if [ -f $HOME/.local_bashrc ]
-then
-    . $HOME/.local_bashrc
 fi
 
 if echo $PATH | grep -v /usr/local/bin > /dev/null
