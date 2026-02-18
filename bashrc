@@ -122,6 +122,13 @@ then
     PATH=$PATH:/usr/local/arduino-1.8.10
 fi
 
+# add claude if available
+
+if [ -d $HOME/.local/bin ]
+then
+    PATH=$PATH:$HOME/.local/bin
+fi
+
 export EDITOR=emacsclient
 alias du='du -hs'
 alias df='df -h'
