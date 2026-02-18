@@ -101,13 +101,6 @@ then
     PATH=$PATH:$EHOME/joylisp
 fi
 
-# find openscad where I installed it from a tarball
-
-if [ -d /usr/local/openscad-2014.03/bin ]
-then
-    PATH=$PATH:/usr/local/openscad-2014.03/bin
-fi
-
 # add anaconda if available
 
 if [ -d /usr/local/bin/anaconda/bin ]
@@ -120,6 +113,13 @@ fi
 if [ -d /usr/local/arduino-1.8.10 ]
 then
     PATH=$PATH:/usr/local/arduino-1.8.10
+fi
+
+# add claude if available
+
+if [ -d $HOME/.local/bin ]
+then
+    PATH=$PATH:$HOME/.local/bin
 fi
 
 export EDITOR=emacsclient
