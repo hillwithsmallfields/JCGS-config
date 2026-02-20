@@ -1,1 +1,4 @@
-0 3 * * * /mnt/usbmem/JCGS-scripts/pullrepos
+0 3 * * * /mnt/hdd0/home/jcgs/open-projects/github.com/hillwithsmallfields/JCGS-scripts/getprojects
+0 4 * * * /mnt/hdd0/home/jcgs/open-projects/github.com/hillwithsmallfields/qs/update/update
+
+
