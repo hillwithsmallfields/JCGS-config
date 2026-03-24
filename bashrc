@@ -49,6 +49,8 @@ export PATH=$PATH:$SYNCED/com:$EHOME/bin:$SCRIPTS
 
 export WWW_HOME=$SYNCED/local-www/index.html
 
+export EMAIL=jcg.sturdy@gmail.com
+
 export LD_LIBRARY_PATH=/lib:/usr/lib:/usr/local/lib/
 
 # export EMACS_SERVER_FILE=$HOME/.emacs-servers/server
